@@ -1,0 +1,20 @@
+For both of these programs, the arguments will be the same. Those arguments being the job count and the output file name. If these arguments are not given, neither program will run.
+
+
+NOTE: FILE NAMES SHOULD END IN .json
+Example call: python3 job_creator_dynamic.py -j 4 -o Data.json
+	*creates a dynamic jobset of 4 jobs and stores it in Data.json*
+
+
+
+
+Differences
+
+Statc:
+    The static job creator is used as a very basic test to run. It will create as many jobs as you ask. These jobs will all run for exactly 50 emulated seconds and each job will arrive after the other ends. They will also require 10 resources each! make sure to edit your platform to have the ammount of resources you wish to have when running these tests!
+
+
+
+
+Dynamic:
+    Dynamic was created to mimic jobs based on the grizzly dataset. It is reccomended to make sure your platform has atleast 1419 nodes to ensure no job is canceled. There are a total of 47070 different profiles, each coressponding to its respective wallclock time to mimic the jobs of the grizzly data set. Each job is randomly assigned a profile based on a normal distribution of the Grizzly data. Again, ensure that platform you are running on matches what you want before executing the jobs!
