@@ -65,7 +65,7 @@ for x in range(1,int(totalJobs) + 1):
 	if deviation > 95 and deviation <= 100:
 		randomNum = random.randrange(130, 186, 1)
 		randomWallclock = random.randrange(34472, 47069, 1)
-	p = x*25
+	p = x*138
 	myfile.write("		{")
 	myfile.write("\n			\"id\": {},\n			\"profile\": \"Profile{}\",\n			\"res\": {},\n			\"subtime\":{},\n			\"walltime\": {}".format(x, randomWallclock,randomNum, p, randomWallclock+1))
 	if x != int(totalJobs):
