@@ -8,7 +8,7 @@ from datetime import datetime
 import sys
 import getopt
 import argparse
-random.seed(datetime.now())
+random.seed(datetime.now)
 
 
 
@@ -78,14 +78,14 @@ myfile.write( "	],\n\n	\"profiles\": {\n		" )
 for y in range(1,47070):
 	if y != 47069:
 		myfile.write("\"Profile{}\":".format(y))
-		myfile.write("{\n			\"type\": \"parallel_homogeneous\",\n			\"cpu\":") 
-		myfile.write("{}e9,\n			\"com\": 0".format(y,y))
+		myfile.write("{\n			\"type\": \"delay\",\n			\"delay\":") 
+		myfile.write("{}\n			".format(y,y))
 		myfile.write("\n		},\n		")
 	else:
 		#myfile.write("\"Profile\"{}: {\n		\"type\": \"parallel_homogeneous_total\",\n			\"cpu\": {}e10,\n			\"com\")
 		myfile.write("\"Profile{}\":".format(y))
-		myfile.write("{\n		\"type\": \"parallel_homogeneous\",\n			\"cpu\":") 
-		myfile.write("{}e9,\n			\"com\": 0".format(y,y))
+		myfile.write("{\n		\"type\": \"delay\",\n			\"delay\":") 
+		myfile.write("{}\n			".format(y,y))
 		myfile.write("\n		}\n	}\n}")
 
 
