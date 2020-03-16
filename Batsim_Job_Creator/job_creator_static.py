@@ -47,7 +47,7 @@ for x in range(1, int(totalJobs) +1):
 		myfile.write(" \n		},\n")
 	else:
 		myfile.write("\n		}\n")
-myfile.write("	],\n\n	\"profiles\": {\n		\"Profile1\": {\n			\"type\": \"parallel_homogeneous_total\",\n			\"cpu\": 50e10,\n			\"com\": 0\n		}\n	}\n}")	
+myfile.write("	],\n\n	\"profiles\": {\n		\"Profile1\": {\n			\"type\": \"parallel_homogeneous\",\n			\"cpu\": 50e10,\n			\"com\": 0\n		}\n	}\n}")	
 
 
 myfile.close()	
